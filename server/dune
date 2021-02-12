@@ -1,4 +1,6 @@
 (executable
  (public_name async_app)
  (name main)
- (libraries async_app opium))
+ (flags (:standard -w -27))
+ (libraries async_app opium services)
+)

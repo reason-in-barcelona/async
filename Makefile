@@ -24,7 +24,7 @@ dev:
 .PHONY: watch
 watch:
 	watchexec -w server \
-	--exts re,rei,ml,mli,atd,json -r -c \
+	--exts re,rei,ml,mli,atd,json,opam -r -c \
 	"$(MAKE) run-debug"
 
 .PHONY: fmt
@@ -39,6 +39,7 @@ test:
 
 .PHONY: run
 run:
+	# Build and run the app
 	$(DUNE) exec $(project_name)
 
 .PHONY: run-debug
